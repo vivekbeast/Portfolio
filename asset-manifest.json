@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/vivekbeast/Portfolio.git/static/css/main.4c42d8e9.css",
+    "main.js": "/vivekbeast/Portfolio.git/static/js/main.d735ed76.js",
+    "static/media/IRONMAN.png": "/vivekbeast/Portfolio.git/static/media/IRONMAN.14a103218fd3b8aa284f.png",
+    "index.html": "/vivekbeast/Portfolio.git/index.html",
+    "main.4c42d8e9.css.map": "/vivekbeast/Portfolio.git/static/css/main.4c42d8e9.css.map",
+    "main.d735ed76.js.map": "/vivekbeast/Portfolio.git/static/js/main.d735ed76.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c42d8e9.css",
+    "static/js/main.d735ed76.js"
+  ]
+}
