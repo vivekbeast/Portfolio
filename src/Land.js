@@ -12,6 +12,8 @@ import {
     CursorArrowRaysIcon,
     SquaresPlusIcon,
     ShoppingCartIcon,
+    CurrencyRupeeIcon,
+    ShieldCheckIcon
   } from '@heroicons/react/24/outline'
   import { IoLogoCss3 } from "react-icons/io5";
   import { IoLogoHtml5 } from "react-icons/io5";
@@ -29,10 +31,13 @@ import {
 const products = [
   
     { name: 'Shopping Site', description: 'Explore my clothing store.', href: 'https://vivekbeast.github.io/vt-5/index.html', icon: ShoppingCartIcon },
+    { name: 'FitnessApp', description: 'Gtime fitness app built using API', href: 'https://vivekbeast.github.io/Fitness_APP/', icon: ShieldCheckIcon },
+    { name: 'Expense Tracker', description: 'Vgrow app built with Google Firebase', href: 'https://expense-tracker-374f6.web.app/', icon: CurrencyRupeeIcon },
     { name: 'Directionless Science', description: 'The greatest project & content.', href: 'https://vivekbeast.github.io/Dscience/', icon: CursorArrowRaysIcon },
     { name: 'Weather App', description: 'Using API, this site shows weather details.', href: 'https://vivekbeast.github.io/Weather-QuoteAPP/', icon: GlobeAltIcon },
     { name: 'Integrations', description: 'All-in-one WeBPAGE of all my projects.', href: 'https://vivekbeast.github.io/UP2/', icon: SquaresPlusIcon },
     { name: 'My First Webpage', description: "Let's time-travel back.", href: 'https://vivekbeast.github.io/Project4/', icon: ArrowPathIcon },
+    
   
   
 ]
@@ -107,7 +112,7 @@ export default function Land(){
              </Popover>
             </div>
             </section>
-            <section className=''>
+            <section className=' h-screen justify-center flex items-center'>
                 <div className='  justify-center text-center -m-.5 p-2.5 mx-auto max-w-lg'>
                 <h1 className=' justify-center text-2xl font-sans text-slate-50 text-center -m-.5 p-2.5'>What i Know...</h1>
                 <div className="flex flex-wrap justify-center gap-4 bg-slate-800 p-5 rounded-md">
