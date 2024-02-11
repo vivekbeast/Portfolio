@@ -15,44 +15,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon} from '@heroicons/react/20/solid'
 import Lottie from "lottie-react";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import wel from './WEL.json'
+import wel from './LottieJSONfiles/WEL.json'
 
 
 
@@ -77,23 +40,21 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
   return (
-    <header  className=" bg-inherit fixed top-0 w-full shadow-lg z-10 rounded-lg">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <header className=" bg-inherit fixed top-0 w-full shadow-lg z-10 rounded-lg">
+      <nav
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
         <div className="flex flex-row lg:flex-1">
-        <Lottie className=' h-7 align-top' animationData={wel}></Lottie>
+          <Lottie className=" h-7 align-top" animationData={wel}></Lottie>
         </div>
-        
+
         <div className="flex lg:hidden">
-        
           <button
-          initial={{ y: 10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 10, opacity: 0 }}
-          transition={{ duration: 0.6 }}
-
-
-
-
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 10, opacity: 0 }}
+            transition={{ duration: 0.6 }}
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-slate-100"
             onClick={() => setMobileMenuOpen(true)}
@@ -103,16 +64,19 @@ export default function Example() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
-        
-          
-          
-          <h1 href="#" className="text-sm font-semibold leading-6 text-slate-200">
+          <h1
+            href="#"
+            className="text-sm font-semibold leading-6 text-slate-200"
+          >
             Home
           </h1>
           <Popover className="relative ">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-slate-200">
               Git Projects
-              <ChevronDownIcon className="h-5 w-5 flex-none text-slate-200" aria-hidden="true" />
+              <ChevronDownIcon
+                className="h-5 w-5 flex-none text-slate-200"
+                aria-hidden="true"
+              />
             </Popover.Button>
 
             <Transition
@@ -132,10 +96,16 @@ export default function Example() {
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                        <item.icon
+                          className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                          aria-hidden="true"
+                        />
                       </div>
                       <div className="flex-auto">
-                        <a href={item.href} className="block font-semibold text-gray-900">
+                        <a
+                          href={item.href}
+                          className="block font-semibold text-gray-900"
+                        >
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
@@ -144,24 +114,34 @@ export default function Example() {
                     </div>
                   ))}
                 </div>
-                
               </Popover.Panel>
             </Transition>
           </Popover>
-          <h1 href="#" className="text-sm font-semibold leading-6 text-slate-200">
+          <h1
+            href="#"
+            className="text-sm font-semibold leading-6 text-slate-200"
+          >
             Contact
           </h1>
-          <h1 href="#" className="text-sm font-semibold leading-6 text-slate-200">
+          <h1
+            href="#"
+            className="text-sm font-semibold leading-6 text-slate-200"
+          >
             About
           </h1>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <h1  className="text-sm font-semibold leading-6 text-slate-200">
+          <h1 className="text-sm font-semibold leading-6 text-slate-200">
             Log in <span aria-hidden="true">&rarr;</span>
           </h1>
         </div>
       </nav>
-      <Dialog as="div" className="lg:hidden " open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      <Dialog
+        as="div"
+        className="lg:hidden "
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+      >
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-b from-gray-800 via-slate-500 to-gray-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
@@ -179,7 +159,10 @@ export default function Example() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6 text-slate-100" aria-hidden="true" />
+              <XMarkIcon
+                className="h-6 w-6 text-slate-100"
+                aria-hidden="true"
+              />
             </button>
           </div>
           <div className="mt-6 flow-root">
@@ -188,10 +171,13 @@ export default function Example() {
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-slate-200 hover:bg-gray-50">
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-slate-200 ">
                         Git Projects
                         <ChevronDownIcon
-                          className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
+                          className={classNames(
+                            open ? "rotate-180" : "",
+                            "h-5 w-5 flex-none"
+                          )}
                           aria-hidden="true"
                         />
                       </Disclosure.Button>
@@ -201,11 +187,15 @@ export default function Example() {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="flex rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray hover:bg-gray-50  items-center"
+                            className="flex rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray   items-center"
                           >
-                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg  group-hover:bg-white">
-                        <item.icon className="h-6 w-6 text-gray-100 group-hover:text-indigo-600" aria-hidden="true" />
-                      </div>{item.name}
+                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg  ">
+                              <item.icon
+                                className="h-6 w-6 text-gray-100 group-hover:text-indigo-600"
+                                aria-hidden="true"
+                              />
+                            </div>
+                            {item.name}
                           </Disclosure.Button>
                         ))}
                       </Disclosure.Panel>
@@ -214,27 +204,27 @@ export default function Example() {
                 </Disclosure>
                 <h1
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-200 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-200 "
                 >
                   Home
                 </h1>
                 <h1
                   href="https://github.com/vivekbeast"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-200 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-200 "
                 >
                   Contact
                 </h1>
                 <h1
                   href="https://www.google.com/search?client=firefox-b-d&q=human"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-200 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-200 "
                 >
                   About
                 </h1>
               </div>
               <div className="py-6">
-                <h1 
+                <h1
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-slate-200 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-black hover:bg-gray-50"
                 >
                   Log in <span aria-hidden="true">&rarr;</span>
                 </h1>
@@ -244,6 +234,6 @@ export default function Example() {
         </Dialog.Panel>
       </Dialog>
     </header>
-  )
+  );
 }
 
