@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Workbench&display=swap');
 
 
 
@@ -47,7 +46,7 @@ code {
   position: absolute;
   border: 3px solid rgb(187, 186, 186);
   animation: flow 8s infinite ease-in-out;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.747);
+  box-shadow: 0 0 20px rgba(205, 204, 204, 0.747);
 }
 
 @keyframes flow {
@@ -66,4 +65,19 @@ code {
   100% {
     border-radius: 50%;
   }
+}
+
+
+.texthello{
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.landingpage {
+  background-image: url(./images/pexels-auto-records-10394772-removebg-preview.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

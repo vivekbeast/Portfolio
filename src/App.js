@@ -16,7 +16,7 @@ import {
 import { ChevronDownIcon} from '@heroicons/react/20/solid'
 import Lottie from "lottie-react";
 import wel from './LottieJSONfiles/WEL.json'
-
+import './index.css'
 
 
 
@@ -40,13 +40,14 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
   return (
-    <header className=" bg-inherit fixed top-0 w-full shadow-lg z-10 rounded-lg">
+    <header className=" bg-inherit fixed top-0 w-full shadow-lg z-30 rounded-lg">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
-        <div className="flex flex-row lg:flex-1">
-          <Lottie className=" h-7 align-top" animationData={wel}></Lottie>
+        <div className="landingpage flex flex-row lg:flex-1 ">
+          {/* <Lottie className=" h-7 align-top z-0 "  animationData={wel}></Lottie> */}
+          {/* <img src={} alt="" /> */}
         </div>
 
         <div className="flex lg:hidden">
@@ -124,7 +125,7 @@ export default function Example() {
             Contact
           </h1>
           <h1
-            href="#"
+            href="#bottom"
             className="text-sm font-semibold leading-6 text-slate-200"
           >
             About
@@ -142,8 +143,8 @@ export default function Example() {
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-b from-gray-800 via-slate-500 to-gray-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-0 z-30" />
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-gradient-to-b from-gray-800 via-slate-500 to-gray-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <h1 href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
@@ -154,16 +155,16 @@ export default function Example() {
               /> */}
             </h1>
             <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon
-                className="h-6 w-6 text-slate-100"
-                aria-hidden="true"
-              />
-            </button>
+  type="button"
+  className="-m-2.5 rounded-md p-2.5 text-gray-700 z-30 bg-gray-700"
+  onClick={() => setMobileMenuOpen(false)}
+>
+  <span className="sr-only">Close menu</span>
+  <XMarkIcon
+    className="h-6 w-6 text-slate-100"
+    aria-hidden="true"
+  />
+</button>
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
