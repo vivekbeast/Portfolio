@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/vivekbeast/Portfolio.git/static/css/main.4c42d8e9.css",
-    "main.js": "/vivekbeast/Portfolio.git/static/js/main.d735ed76.js",
-    "static/media/IRONMAN.png": "/vivekbeast/Portfolio.git/static/media/IRONMAN.14a103218fd3b8aa284f.png",
-    "index.html": "/vivekbeast/Portfolio.git/index.html",
-    "main.4c42d8e9.css.map": "/vivekbeast/Portfolio.git/static/css/main.4c42d8e9.css.map",
-    "main.d735ed76.js.map": "/vivekbeast/Portfolio.git/static/js/main.d735ed76.js.map"
+    "main.css": "/Portfolio/static/css/main.d298fbb0.css",
+    "main.js": "/Portfolio/static/js/main.e84931f9.js",
+    "static/media/icon-my.png": "/Portfolio/static/media/icon-my.c3f534d3f53a6d2ad8fc.png",
+    "static/media/pexels-auto-records-10394772-removebg-preview.png": "/Portfolio/static/media/pexels-auto-records-10394772-removebg-preview.8f77764a632ebb47ad5e.png",
+    "index.html": "/Portfolio/index.html",
+    "main.d298fbb0.css.map": "/Portfolio/static/css/main.d298fbb0.css.map",
+    "main.e84931f9.js.map": "/Portfolio/static/js/main.e84931f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c42d8e9.css",
-    "static/js/main.d735ed76.js"
+    "static/css/main.d298fbb0.css",
+    "static/js/main.e84931f9.js"
   ]
 }
