@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 // import as from './abstract-minimalism-4k-gz.jpg'
 // import {motion} from "framer-motion"
 import Lottie from "lottie-react";
 import hi from './LottieJSONfiles/ROBOT.json'
-import iron from '../src/images/WhatsApp Image 2024-02-11 at 11.09.56_6adf1db8.jpg'
-import {motion} from "framer-motion"
-import {Popover } from '@headlessui/react'
+// import iron from '../src/images/WhatsApp Image 2024-02-11 at 11.09.56_6adf1db8.jpg'
+// import {motion} from "framer-motion"
+// import {Popover } from '@headlessui/react'
 import {
     ArrowPathIcon,
     GlobeAltIcon,
@@ -26,7 +26,7 @@ import {
 import './index.css'
 import {  useLayoutEffect } from 'react';
 import gsap from 'gsap';
-import { useTypewriter, Cursor } from 'react-simple-typewriter';
+// import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 
 const products = [

@@ -7,7 +7,6 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
     <Land />
-    <div id='bottom'>dd</div>
   </React.StrictMode>,
   document.getElementById('root')
 );
