@@ -30,10 +30,10 @@ code {
   background-size: cover;
 } */
 .image-box {
-  width: 200px;
-  height: 200px;
+  width: 55px;
+  height: 55px;
   /* border: 3px solid; */
-  border-radius: 50%;
+  border-radius: 10%;
   overflow: visible;
   position: relative;
   /* animation: flow 6s infinite ease-in-out; */
@@ -44,9 +44,9 @@ code {
   height: 100%;
   object-fit: cover;
   position: absolute;
-  border: 3px solid rgb(187, 186, 186);
-  animation: flow 8s infinite ease-in-out;
-  box-shadow: 0 0 20px rgba(205, 204, 204, 0.747);
+  border: 1px solid inherit;
+  animation: flow 5s infinite ease-in-out;
+  box-shadow: 0px 0 5px #ffffff;
 }
 
 @keyframes flow {
@@ -54,7 +54,7 @@ code {
     border-radius: 50%;
   }
   25% {
-    border-radius: 45% 55% 55% 45% / 50% 60% 40% 50%;
+    border-radius: 50% 50% 50% 40% / 50% 60% 40% 50%;
   }
   50% {
     border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
@@ -66,6 +66,26 @@ code {
     border-radius: 50%;
   }
 }
+/* @keyframes flow {
+  0% {
+    border-radius: 50%;
+  }
+  25% {
+    border-radius: 10%;
+  }
+  50% {
+    border-radius: 50%;
+  }
+  75% {
+    border-radius: 10% 90% 60% 40% / 50% 50% 40% 60%;
+  }
+  85% {
+    border-radius: 0 90% 60% 0 / 50% 50% 40% 60%;
+  }
+  100% {
+    border-radius: 50%;
+  }
+} */
 
 
 .texthello{

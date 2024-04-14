@@ -51,20 +51,6 @@ export default function Land(){
   useLayoutEffect(()=>{
     let ctx = gsap.context(()=>{
       const t1 = gsap.timeline()
-      // t1.from("#hello",{
-      //   xPercent: "-100",
-      //   duration: 1.3,
-      //   delay: 0.5
-      // }).from("original",{
-      //   opacity: 1,
-      // })
-      // t1.to("#hello",{
-      //   xPercent: "-100",
-      //   duration: 1.3,
-      //   delay: 0.3
-      // }).from("original",{
-      //   opacity: 1,
-      // })
       t1.from("#hello", {
         xPercent: "-200",
         duration: 1,
@@ -92,16 +78,13 @@ export default function Land(){
 
       return ()=> ctx.revert()
     })
-  },[comp])
+  },[comp]);
+
   // const [text] = useTypewriter({
   //   words: ['Frontend Developer'],
   //   loop: false,
+  //   delaySpeed: 20000,
   // });
-  // from-gray-800 via-slate-500 to-gray-800
-  const [text] = useTypewriter({
-    words: ['Frontend Developer'],
-    loop: false,
-  });
 
  
 
@@ -117,7 +100,7 @@ export default function Land(){
 
 
     return(
-        <div className=' bg-gradient-to-b from-gray-800 via-slate-500 to-gray-800 static' ref={comp}>
+        <div className=' bg-gray-900 static' ref={comp}>
          <div id='hello' className=' justify-center  z-20 bg-gray-900 text-center h-screen w-full self-center flex absolute items-center'>
                 <h1 id='texthello' className='texthello text-[80px] text-white'>Hello!!</h1>
               </div>
@@ -128,15 +111,16 @@ export default function Land(){
     <div className=" mr-4 mb-4 md:mb-0 p-2 md:p-6 lg:p-6 xl:p-10 rounded-md">
  <div className=' flex gap-1 text-white'><p className=' text-md md:text-lg lg:text-xl xl:text-lg text-white font-medium'>I’m </p><h1 className=' font-bold text-white text-md md:text-lg lg:text-xl xl:text-lg'>Vivek Tarnallya </h1> <p className=' text-md md:text-lg lg:text-xl xl:text-lg'>a Passionate</p></div>
   <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-50 ">
-    {text}<Cursor />  🧑🏻‍💻
+    {/* {text}<Cursor /> */}
+    Frontend Developer  🧑🏻‍💻
   </h1>
   <p className="text-md md:text-lg lg:text-xl xl:text-lg hidden md:flex lg:flex text-neutral-200 max-w-[20rem] md:max-w-[25rem] lg:max-w-[30rem] xl:max-w-[35rem] break-words mb-4 md:mb-6 lg:mb-8 xl:mb-10">
      creating vibrant, responsive UIs to enhance user experiences
   </p>
 
   <div className='flex'>
-    <a href='https://www.linkedin.com/in/vivek-tarnallya-981684259' target='_blank' rel='noopener noreferrer'>
-      <FaLinkedin className='mt-2 mr-4 text-[25px] md:text-[29px] lg:text-[29px] text-sky-500' />
+    <a href='https://www.linkedin.com/in/vivek-tarnallya-981684259' target='_blank'  rel='noopener noreferrer'>
+      <FaLinkedin className='mt-2 mr-4 text-[25px] md:text-[26px] lg:text-[30px] text-sky-500 ' />
     </a>
     <a href='https://github.com/vivekbeast' target='_blank' rel='noopener noreferrer'>
       <SiGithub className='mt-2 text-[25px] md:text-[29px] lg:text-[29px]' />
@@ -144,17 +128,7 @@ export default function Land(){
   </div>
 </div>
 
-    <div className=' flex justify-center items-center lg:pt-8'>
-      <motion.dv
-        initial={{ y: -10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 10, opacity: 0 }}
-        transition={{ duration: 0.6 }}
-        className="image-box"
-      >
-        <img className="image-logo w-full rounded-full" src={iron} alt="" />
-      </motion.dv>
-    </div>
+    
   </div>
 </div>
 

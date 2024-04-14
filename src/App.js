@@ -14,10 +14,12 @@ import {
   
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon} from '@heroicons/react/20/solid'
-import Lottie from "lottie-react";
-import wel from './LottieJSONfiles/WEL.json'
+// import Lottie from "lottie-react";
+// import wel from './LottieJSONfiles/WEL.json'
 import './index.css'
-
+import iron from '../src/images/icon-my.png'
+import {motion} from "framer-motion"
+// import {Popover } from '@headlessui/react'
 
 
 const products = [
@@ -40,15 +42,26 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
   return (
-    <header className=" bg-inherit fixed top-0 w-full shadow-lg z-30 rounded-lg">
+    <header className=" bg-inherit fixed  top-0 w-full shadow-lg z-30 rounded-lg">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
-        <div className="landingpage flex flex-row lg:flex-1 ">
+        {/* <div className="landingpage flex flex-row lg:flex-1 "> */}
           {/* <Lottie className=" h-7 align-top z-0 "  animationData={wel}></Lottie> */}
           {/* <img src={} alt="" /> */}
-        </div>
+        {/* </div> */}
+        <div className=' flex justify-center h-7 items-center '>
+      <motion.dv
+        initial={{ y: -10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 10, opacity: 0 }}
+        transition={{ duration: 0.6 }}
+        className="image-box"
+      >
+        <img className="image-logo w-full rounded-full" src={iron} alt="" />
+      </motion.dv>
+    </div>
 
         <div className="flex lg:hidden">
           <button
@@ -64,7 +77,7 @@ export default function Example() {
             <Bars3Icon className="h-7 w-7 rounded-md" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
+        <Popover.Group className="hidden lg:flex lg:gap-x-12  lg:flex-1 lg:justify-end">
           <h1
             href="#"
             className="text-sm font-semibold leading-6 text-slate-200"
@@ -89,8 +102,8 @@ export default function Example() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-gradient-to-b from-gray-200 via-slate-300 to-gray-200 shadow-lg ring-1 ring-gray-900/5">
-                <div className="p-4">
+              <Popover.Panel className="absolute -left-[100px] top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl md:-left-[300px] bg-gray-800 text-white shadow-lg ring-1 ring-gray-900/5">
+                <div className="p-4 text-white">
                   {products.map((item) => (
                     <div
                       key={item.name}
@@ -102,15 +115,15 @@ export default function Example() {
                           aria-hidden="true"
                         />
                       </div>
-                      <div className="flex-auto">
+                      <div className="flex-auto hover:text-gray-900">
                         <a
                           href={item.href}
-                          className="block font-semibold text-gray-900"
+                          className="block font-semibold hover:text-gray-900"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
+                        <p className="mt-1 hover:text-gray-900">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -131,11 +144,11 @@ export default function Example() {
             About
           </h1>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <h1 className="text-sm font-semibold leading-6 text-slate-200">
             Log in <span aria-hidden="true">&rarr;</span>
           </h1>
-        </div>
+        </div> */}
       </nav>
       <Dialog
         as="div"
@@ -144,7 +157,7 @@ export default function Example() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-30" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-gradient-to-b from-gray-800 via-slate-500 to-gray-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <h1 href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
@@ -188,11 +201,11 @@ export default function Example() {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="flex rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray   items-center"
+                            className="flex rounded-lg py-2 pl-6 pr-3 text-sm text-white font-semibold leading-7 text-gray   items-center"
                           >
-                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg  ">
+                            <div className="flex h-11 w-11 flex-none text-white items-center justify-center rounded-lg  ">
                               <item.icon
-                                className="h-6 w-6 text-gray-100 group-hover:text-indigo-600"
+                                className="h-6 w-6 "
                                 aria-hidden="true"
                               />
                             </div>
@@ -222,14 +235,14 @@ export default function Example() {
                   About
                 </h1>
               </div>
-              <div className="py-6">
+              {/* <div className="py-6">
                 <h1
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-black hover:bg-gray-50"
                 >
                   Log in <span aria-hidden="true">&rarr;</span>
                 </h1>
-              </div>
+              </div> */}
             </div>
           </div>
         </Dialog.Panel>
