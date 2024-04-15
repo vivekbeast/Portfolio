@@ -27,7 +27,7 @@ import './index.css'
 import {  useLayoutEffect } from 'react';
 import gsap from 'gsap';
 // import { useTypewriter, Cursor } from 'react-simple-typewriter';
-
+import { SiRedux } from "react-icons/si";
 
 const products = [
   
@@ -167,28 +167,31 @@ export default function Land(){
             <section className=' h-screen  flex flex-col '>
                 <div className='  justify-center text-center -m-.5 p-2.5 mt-[355px] mx-auto max-w-lg'>
                 <h1 className=' justify-center text-2xl font-sans text-slate-50 text-center -m-.5 p-2.5'>What i Know...</h1>
-                <div className="flex flex-wrap justify-center gap-4 bg-slate-800 p-5 rounded-md">
+                <div className="flex flex-wrap items-center justify-center gap-4 bg-slate-800 p-5 rounded-md">
   <div className=" w-24 text-center bg-gray-200 p-4 rounded-md flex flex-row align-center justify-center">
-    <h1>React</h1>
-    <FaReact />
+    <h1 className=' flex self-center'>React</h1>
+    <FaReact className=' flex self-center ml-2'/>
   </div>
   <div className=" w-26 text-center bg-gray-200 p-4 rounded-md flex flex-row align-center justify-center">
-    <h1>Javascript</h1>
-    <IoLogoJavascript/>
+    <h1 className=' flex self-center'>Javascript</h1>
+    <IoLogoJavascript className=' flex self-center ml-2'/>
   </div>
   <div className=" w-26 text-center bg-gray-200 p-4 rounded-md flex flex-row align-center justify-center">
-    <h1>Tailwind</h1>
-    <SiTailwindcss />
+    <h1 className=' flex self-center'>Tailwind</h1>
+    <SiTailwindcss className=' flex self-center ml-2'/>
   </div>
   <div className=" w-22 text-center bg-gray-200 p-4 rounded-md flex flex-row align-center justify-center">
-    <h1>HTML</h1>
-    <IoLogoHtml5 />
+    <h1 className=' flex self-center'>HTML</h1>
+    <IoLogoHtml5 className=' flex self-center ml-2'/>
   </div>
   <div className=" w-22 text-center bg-gray-200 p-4 rounded-md flex flex-row align-center justify-center">
-    <h1>CSS</h1>
-    <IoLogoCss3 />
+    <h1 className=' flex self-center'>CSS</h1>
+    <IoLogoCss3 className=' flex self-center ml-2'/>
   </div>
-  
+  <div className=" w-22 text-center bg-gray-200 p-4 rounded-md flex flex-row align-center justify-center">
+    <h1 className=' flex self-center'>Redux</h1>
+    <SiRedux className=' flex self-center ml-2'/>
+  </div>
 </div>
 
                 </div>
